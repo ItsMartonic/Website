@@ -1,25 +1,39 @@
+/* Break */
+
+#break {
+    background: rgb(235, 235, 235);
+    height: 1000px;
+}
+
 /* Variables */
 
 :root {
-    /* General Text */
-    --general-text-font-family: "Poppins", sans-serif;
-    --general-text-font-weight: 400;
-    --general-text-font-size: 15px;
-    --general-text-color: rgb(25, 25, 25);
-
-    /* Header */
-    --header-background: rgb(255, 255, 255);
-
-    /* Main */
-    --main-background: rgb(235, 235, 235);
-
     /* FOOTER */
 
     /* Footer Main */
     --footer-main-background: rgb(255, 255, 255);
 
+    /* Footer Text Title */
+    --footer-text-title-font-family: "Poppins", sans-serif;
+    --footer-text-title-font-weight: 700;
+    --footer-text-title-font-size: 25px;
+    --footer-text-title-color: rgb(25, 25, 25);
+
+    /* Footer Text Content */
+    --footer-text-content-font-family: "Poppins", sans-serif;
+    --footer-text-content-font-weight: 400;
+    --footer-text-content-font-size: 15px;
+    --footer-text-content-color: rgb(25, 25, 25);
+
+    /* Footer Text Menu */
+    --footer-text-menu-font-family: "Poppins", sans-serif;
+    --footer-text-menu-font-weight: 400;
+    --footer-text-menu-font-size: 15px;
+    --footer-text-menu-color: rgb(25, 25, 25);
+    --footer-text-menu-hover-color: rgb(255, 100, 5);
+
     /* Footer Links */
-    --footer-links-background: rgb(255, 255, 255);
+    --footer-links-background: rgb(245, 245, 245);
 
     /* Footer Icon */
     --footer-icon-background: rgb(255, 255, 255);
@@ -28,33 +42,11 @@
     --footer-icon-hover-color: rgb(255, 100, 5);
 }
 
-/* General */
-
-html {
-    font-family: var(--general-text-font-family);
-    font-weight: var(--general-text-font-weight);
-    font-size: var(--general-text-font-size);
-    color: var(--general-text-color);
-}
+/* Base */
 
 body {
     overflow: auto;
-    margin: 0;
-}
-
-/* Header */
-
-#header {
-    background: var(--header-background);
-    padding: 15px;
-}
-
-/* Main */
-
-#main {
-    background: var(--main-background);
-    padding: 15px;
-    height: 1000px;
+    margin: 0px;
 }
 
 /* Footer */
@@ -62,23 +54,62 @@ body {
 .footer-main {
     background: var(--footer-main-background);
     padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 }
 
+.footer-main-item {
+    min-width: 10rem;
+}
 
+.footer-text-title {
+    padding: 10px;
+    font-family: var(--footer-text-title-font-family);
+    font-weight: var(--footer-text-title-font-weight);
+    font-size: var(--footer-text-title-font-size);
+    color: var(--footer-text-title-color);
+}
+
+.footer-text-content {
+    font-family: var(--footer-text-content-font-family);
+    font-weight: var(--footer-text-content-font-weight);
+    font-size: var(--footer-text-content-font-size);
+    color: var(--footer-text-content-color);
+}
+
+.footer-text-menu {
+    font-family: var(--footer-text-menu-font-family);
+    font-weight: var(--footer-text-menu-font-weight);
+    font-size: var(--footer-text-menu-font-size);
+    color: var(--footer-text-menu-color);
+}
+
+.footer-text-menu:hover {
+    transition: 0.25s;
+    color: var(--footer-text-menu-hover-color);
+}
+
+.footer-menu {
+    padding: 0px;
+    list-style-type: none;
+}
+
+.footer-menu-hyperlink {
+    text-decoration: none;
+}
 
 .footer-links {
     background: var(--footer-links-background);
     padding: 15px;
-}
-
-.footer-icon-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    list-style-type: none;
-    padding: 0px;
-    margin: auto;
+}
+
+.footer-links-item {
+    min-width: 2.5rem;
 }
 
 .footer-icon {
