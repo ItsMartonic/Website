@@ -1,4 +1,18 @@
-/* Base CSS */
+/* Variables */
+
+:root {
+  /* Default CSS */
+  --default-css-font-family: "Poppins", sans-serif;
+  --default-css-font-weight: 400;
+  --default-css-font-size: 15px;
+  --default-css-font-color: rgb(25, 25, 25);
+  /* Colors */
+  --color-black: rgb(25, 25, 25);
+  --color-white: rgb(255, 255, 255);
+  --color-orange: rgb(255, 100, 5);
+}
+
+/* Default CSS */
 
 * {
   margin: 0px;
@@ -6,29 +20,193 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: var(--default-css-font-family);
+  font-weight: var(--default-css-font-weight);
+  font-size: var(--default-css-font-size);
+  color: var(--default-css-font-color);
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.header-area {
+  background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.5)),
+  url(https://images.unsplash.com/photo-1528353518104-dbd48bee7bc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80);
+  background-position: center center;
+  background-size: cover;
+}
+/* default css end */
+
+
+/* navbar regular css start */
+.navbar-area {
+  background: rgba(0,0,0,.6);
+  border-bottom: 1px solid #000;
+}
+.website-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a.site-logo {
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+.website-navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.website-navbar ul li a {
+  color: #fff;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.website-navbar ul li a:hover {
+  background: rgba(255,255,255,.1);
+}
+/* navbar regular css end */
+
+
+/* navbar-toggler css start */
+.navbar-toggler {
+  border: 3px solid #fff;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  display: none;
+}
+.navbar-toggler span, 
+.navbar-toggler span:before, 
+.navbar-toggler span:after {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  transition: .3s;
+}
+.navbar-toggler span:before {
+  content: '';
+  transform: translateY(-9px);
+}
+.navbar-toggler span:after {
+  content: '';
+  transform: translateY(6px);
+}
+.navbar-toggler.toggler-open span {
+  background-color: transparent;
+}
+.navbar-toggler.toggler-open span:before {
+  transform: translateY(0px) rotate(45deg);
+}
+.navbar-toggler.toggler-open span:after {
+  transform: translateY(-3px) rotate(-45deg);
+}
+/* navbar-toggler css start */
+
+/* mobile breakpoint start */
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 720px;
+  }
+  /* navbar css for mobile start */
+  .navbar-toggler{
+    display: block;
+  }
+  .website-navbar {
+    min-height: 60px;
+  }
+  .website-navbar ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 60px);
+    left: 0;
+    top: 60px;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #444;
+    background-color: rgba(0,0,0,.75);
+    max-height: 0;
+    overflow: hidden;
+    transition: .3s;
+  }
+  .website-navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .website-navbar ul li a {
+    padding: 25px;
+  }
+  .website-navbar ul li a:hover {
+    background-color: rgba(255,255,255,.1);
+  }
+  .website-navbar ul.open {
+    max-height: 100vh;
+    overflow: visible;
+  }
+  .page-title h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }  
+  /* navbar css for mobile end */
+}
+/* mobile breakpoint end */
+
+
+/* Page Title */
+.page-title {
+  height: calc(100vh - 61px);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.page-title h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 50px;
+  margin-bottom: 25px;
+}
+
+.page-title p {
+  font-size: 20px;
+}
+
 /* Sections */
 
 #section-one {
-  background: red;
+  background: grey;
   height: 200px;
 }
 
 #section-two {
-  background: green;
+  background: darkgray;
   height: 200px;
 }
 
 #section-three {
-  background: blue;
+  background: grey;
   height: 200px;
 }
 
 #section-four {
-  background: orange;
+  background: darkgrey;
   height: 200px;
 }
 
 #section-five {
-  background: yellow;
+  background: grey;
   height: 200px;
 }
