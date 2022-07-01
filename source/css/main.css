@@ -27,7 +27,9 @@
 
 /* navbar regular css start */
 .navbar-area {
-  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  width: 100%;
+  background: grey;
   border-bottom: 1px solid #000;
 }
 .site-navbar {
