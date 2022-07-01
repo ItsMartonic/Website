@@ -1,185 +1,33 @@
-/* Variables */
-
-:root {
-    /* NAVIGATION */
-
-    /* Navigation Background */
-    --navigation-background: rgb(255, 255, 255);
-
-    /* Normal Menu Logo */
-    --normal-menu-logo-font-family: "Poppins", sans-serif;
-    --normal-menu-logo-font-weight: 700;
-    --normal-menu-logo-font-size: 40px;
-    --normal-menu-logo-color: rgb(25, 25, 25);
-
-    /* Normal Menu Links */
-    --normal-menu-links-font-family: "Poppins", sans-serif;
-    --normal-menu-links-font-weight: 700;
-    --normal-menu-links-font-size: 20px;
-    --normal-menu-links-color: rgb(25, 25, 25);
-    --normal-menu-links-hover-color: rgb(255, 100, 5);
-}
-
 /* General */
 
 body {
-    overflow: auto;
-    margin: 0px;
+  overflow: auto;
+  margin: 0px;
 }
-
-/* Navigation */
-
-#navigation {
-    background: var(--navigation-background);
-}
-
-#normal-menu {
-    padding: 0rem 5rem;
-    display: grid;
-    grid-auto-flow: column;
-    grid-gap: 1.5em;
-    min-height: 100px;
-}
-
-#normal-menu-logo {
-    
-    display: grid;
-    justify-content: start;
-    align-content: center;
-    font-family: var(--normal-menu-logo-font-family);
-    font-weight: var(--normal-menu-logo-font-weight);
-    font-size: var(--normal-menu-logo-font-size);
-    color: var(--normal-menu-logo-color);
-    letter-spacing: 1.5px;
-}
-
-#normal-menu-links {
-    display: grid;
-    justify-content: right;
-    align-content: center;
-    grid-auto-flow: column;
-    grid-gap: 1.5em;
-}
-
-#normal-menu-links a {
-    font-family: var(--normal-menu-links-font-family);
-    font-weight: var(--normal-menu-links-font-weight);
-    font-size: var(--normal-menu-links-font-size);
-    color: var(--normal-menu-links-color);
-    text-decoration: none;
-    text-transform: uppercase;
-
-
-    /* THIS MOVES THE TEXT UP A BIT */
-    padding-bottom:5px; /*the space for the gradient*/
-    background: linear-gradient(rgb(255, 100, 5),rgb(255, 100, 5)) center bottom; /*OR bottom right OR bottom left*/
-    background-size: 0% 2px; /*width:0% height:2px*/
-    background-repeat:no-repeat; /* Don't repeat !!*/
-    transition: all 0.25s;
-}
-
-#normal-menu-links a:hover {
-    color: var(--normal-menu-links-hover-color);
-   
-
-    
-    background-size: 100% 2px; /*width:100% height:2px*/
-}
-
-/* =======================
-******* Mobile Menu ******
-========================*/
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #fff;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-a {
-  font-family: "Open Sans", sans-serif;
-}
-
-/* Mobile to Tablet  */
-@media (min-width: 320px) and (max-width: 767px) {
-  #normal-menu-links,
-  .mobile-menu {
-    display: none;
-  }
-  #logo {
-    display: inline-grid;
-    grid-template-columns: auto auto;
-    grid-gap: 70px;
-  }
-}
-
-/* Tablet to Desktop */
-@media (min-width: 768px) {
-  .mobile-btn {
-    display: none;
-  }
-}
-
-
-
-
-
-
-
-
-
-
 
 /* Sections */
 
 #section-one {
-    background: red;
-    height: 300px;
+  background: red;
+  height: 300px;
 }
 
 #section-two {
-    background: green;
-    height: 300px;
+  background: green;
+  height: 300px;
 }
 
 #section-three {
-    background: blue;
-    height: 300px;
+  background: blue;
+  height: 300px;
 }
 
 #section-four {
-    background: orange;
-    height: 300px;
+  background: orange;
+  height: 300px;
 }
 
 #section-five {
-    background: yellow;
-    height: 300px;
+  background: yellow;
+  height: 300px;
 }
